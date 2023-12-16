@@ -77,13 +77,27 @@ class App extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 Row(
                   children: [
                     Container(
-                      child: const Text(
-                        'Transfer',
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(241, 179, 58, 1),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      // container : html의 div와 흡사하다.
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 20,
+                          horizontal: 50,
+                        ),
+                        child: Text(
+                          'Transfer',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
                       ),
                     ),
                   ],
