@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:toonflis_flutter/widgets/button.dart';
+// 자동으로 다른 파일에 있는 클래스를 호출하기 위한 import가 작성된다.
 
 void main() {
   runApp(const App());
@@ -79,27 +81,19 @@ class App extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                Row(
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color.fromRGBO(241, 179, 58, 1),
-                        borderRadius: BorderRadius.circular(40),
-                      ),
-                      // container : html의 div와 흡사하다.
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
+                    Button(
+                      text: 'Transfer',
+                      bgColor: Color.fromRGBO(241, 179, 58, 1),
+                      txtColor: Colors.black,
                     ),
+                    Button(
+                      text: 'Request',
+                      bgColor: Color.fromRGBO(31, 33, 35, 1),
+                      txtColor: Colors.white,
+                    )
                   ],
                 ),
               ],
