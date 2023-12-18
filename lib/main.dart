@@ -126,34 +126,31 @@ class App extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  Column(
+                  const Column(
                     children: [
-                      const CurrencyCard(
+                      CurrencyCard(
                         name: 'Euro',
                         code: 'EUR',
                         amount: '6 824',
                         icon: Icons.euro_symbol,
                         isInverted: false,
+                        // offnumb는 초기값이 0 이므로 생략해도 괜찮.
                       ),
-                      Transform.translate(
-                        offset: const Offset(0, -20),
-                        child: const CurrencyCard(
-                          name: 'Dollar',
-                          code: 'USD',
-                          amount: '55 622',
-                          icon: Icons.monetization_on_outlined,
-                          isInverted: true,
-                        ),
+                      CurrencyCard(
+                        name: 'Dollar',
+                        code: 'USD',
+                        amount: '55 622',
+                        icon: Icons.monetization_on_outlined,
+                        isInverted: true,
+                        offnumb: 1,
                       ),
-                      Transform.translate(
-                        offset: const Offset(0, -40),
-                        child: const CurrencyCard(
-                          name: 'Won',
-                          code: 'KRW',
-                          amount: '1 258 433',
-                          icon: Icons.euro_symbol,
-                          isInverted: false,
-                        ),
+                      CurrencyCard(
+                        name: 'Won',
+                        code: 'KRW',
+                        amount: '1 258 433',
+                        icon: Icons.euro_symbol,
+                        isInverted: false,
+                        offnumb: 2,
                       ),
                     ],
                   )
